@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Character from './Character';
+
 import { Link } from 'react-router-dom';
+import Character from './OneCharacter';
+
 
 const CharacterList = ({ characters }) => {
   const characterInfo = characters.map(character => (
@@ -20,7 +22,7 @@ const CharacterList = ({ characters }) => {
 
 CharacterList.propTypes = {
   characters: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
     image: PropTypes.string,
     type: PropTypes.string,
