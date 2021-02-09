@@ -18,4 +18,20 @@ describe('Main component', () => {
       expect(loading).toHaveTextContent('Loading Characters...');
     });
   });
+  // it.only('test the display', async() => {
+  //   render(<AllCharacters/>);
+
+  //   const main = screen.getByTestId('main');
+  //   const list = screen.getByTestId('list');
+ 
+  //   await setTimeout(() => {
+  //     return waitFor(() => {
+  //       expect(main).toContainElement(list);
+  //     });
+  //   }, 5000);
+
+
+  // });
+
+
 });

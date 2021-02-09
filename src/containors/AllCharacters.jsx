@@ -14,7 +14,8 @@ const AllCharacters = () => {
     });
   }, []);
   if(loading) return <h1 data-testid="loading">Loading Characters...</h1>;
-  return <CharacterList characters={characters} />;
+  // eslint-disable-next-line max-len
+  return <div data-testid="main"> <CharacterList characters={characters} /> </div>;
 };
 export default AllCharacters;
 

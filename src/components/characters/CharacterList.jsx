@@ -6,13 +6,13 @@ import Character from './OneCharacter';
 const CharacterList = ({ characters }) => {
   const characterInfo = characters.map(character => (
     <div key={character.id}>
-      <Link to={`/detail/${character.name}`}>
+      <Link to={`/detail/${character.id}`}>
         <Character {...character} />
       </Link>
     </div> 
   ));
   return (
-    <div>
+    <div data-testid="list" >
       {characterInfo}
     </div>
   );
