@@ -12,12 +12,12 @@ const CharacterList = ({ characters }) => {
     </div> 
   ));
   return (
-    <div data-testid="list" >
+    <div  >
       {characterInfo}
     </div>
   );
 };
-
+// data-testid="list"
 CharacterList.propTypes = {
   characters: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.number.isRequired,

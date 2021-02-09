@@ -18,7 +18,7 @@ function ACharacter() {
     });
   }, []);
   if(loading)
-    return <h1>loading</h1>;
+    return <h1  data-testid="loading">Loading A Character</h1>;
   return <CharacterDetail {...characters} />;
   // return(<h1>hello</h1>);
 }
