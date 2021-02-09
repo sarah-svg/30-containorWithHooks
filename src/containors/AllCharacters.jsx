@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import CharacterList from '../components/characters/CharacterList.jsx';
-
-
 import { getCharacters } from '../services/fetchApi.js';
 
 const AllCharacters = () => {
@@ -15,10 +13,7 @@ const AllCharacters = () => {
       console.log(characters);
     });
   }, []);
-
-
-
-  if(loading) return <h1>Loading Characters</h1>;
+  if(loading) return <h1 data-testid="loading">Loading Characters...</h1>;
   return <CharacterList characters={characters} />;
 };
 export default AllCharacters;

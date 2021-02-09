@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import { Link } from 'react-router-dom';
 import Character from './OneCharacter';
-
 
 const CharacterList = ({ characters }) => {
   const characterInfo = characters.map(character => (

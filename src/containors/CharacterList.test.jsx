@@ -1,18 +1,21 @@
+
+global.fetch = require('node-fetch');
+
 import React from 'react';
-import { render, screen, waitFor  } from '@testing-library/react';
+import { render, screen, cleanup, waitFor } from '@testing-library/react';
+import '@testing-library/jest-dom';
 
+import AllCharacters from './AllCharacters';
 
+describe('Main component', () => {
+  afterEach(() => cleanup());
+  it('tests that loading behavior works as expected', () => {
+    render(<AllCharacters />);
 
-describe('All characters', () => {
-  it('displays the character containor', async() => {
-    render();
-    screen.getByText('Loading');
-
-    const ul = await screen.findAllByTestId('');
+    const loading = screen.getByTestId('loading');
 
     return waitFor(() => {
-      expect(ul).not.toBeEmptyDOMElement();
+      expect(loading).toHaveTextContent('Loading Characters...');
     });
-
   });
 });
