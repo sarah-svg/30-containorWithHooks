@@ -12,7 +12,7 @@ const CharacterList = ({ characters }) => {
     </div> 
   ));
   return (
-    <div  >
+    <div data-testid="characters">
       {characterInfo}
     </div>
   );
