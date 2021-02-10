@@ -12,7 +12,7 @@ const server = setupServer(
   })
 );
 
-describe.only('Main component', () => {
+describe('Main component', () => {
   beforeAll(() => server.listen());
   afterAll(() => server.close());
   // it('tests that loading behavior works as expected', async() => {
