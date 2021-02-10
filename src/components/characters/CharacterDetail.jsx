@@ -1,30 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-
-const CharacterDetail = ({ name, image, type, species, origin, location }) => (
+const CharacterDetail = ({ image, name, status, species }) => (
   <figure>
-    <figcaption>{name}</figcaption>
-    <img src={image} />
-    <ul>
-      {species ? <li>{species}</li> : null}
-      {origin.name ? <li>{origin.name}</li> : null}
-      {location.name ? <li>{location.name}</li> : null}
-      {type ? <li>{type}</li> : null}
-    </ul>
+    <img src={image} alt={name} />
+    <figcaption>
+      <p>{name}</p>
+      <p>{status}</p>
+      <p>{species}</p>
+    </figcaption>
   </figure>
-
-
 );
 
 CharacterDetail.propTypes = {
+  image: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  image: PropTypes.string,
-  species: PropTypes.string,
-  origin: PropTypes.object,
-  location: PropTypes.object,
-  type: PropTypes.string,
-
+  status: PropTypes.string.isRequired,
+  species: PropTypes.string.isRequired
 };
 
 export default CharacterDetail;

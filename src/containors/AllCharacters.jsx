@@ -10,13 +10,14 @@ const AllCharacters = () => {
     getCharacters().then((characters) => {
       setCharacters(characters);
       setLoading(false);  
-      console.log(characters);
+      // console.log(characters);
     });
   }, []);
-  if(loading) return <h1 data-testid="loading">Loading Characters...</h1>;
+  if(loading) return <div
+    text="Loading Characters...">Loading Characters...</div>;
   // eslint-disable-next-line max-len
-  return <div data-testid="main"> <CharacterList characters={characters} /> </div>;
+  return <div placeholder="list">CHARACTER <CharacterList characters={characters} /> </div>;
 };
 export default AllCharacters;
 
-
+// 
