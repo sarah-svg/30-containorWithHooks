@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Main component creates a snapshot test of the character containor 1`] = `
+<DocumentFragment>
+  <div
+    text="Loading Characters..."
+  >
+    Loading Characters...
+  </div>
+</DocumentFragment>
+`;

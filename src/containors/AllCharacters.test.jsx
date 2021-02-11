@@ -15,15 +15,6 @@ const server = setupServer(
 describe('Main component', () => {
   beforeAll(() => server.listen());
   afterAll(() => server.close());
-  // it('tests that loading behavior works as expected', async() => {
-  //   render(<MemoryRouter><AllCharacters /></MemoryRouter>);
-
-  //   const loading = await screen.getByText('Loading Characters...');
-
-  //   return waitFor(() => {
-  //     expect(loading).toHaveTextContent('Loading Characters...');
-  //   });
-  // });
   it('fetches and displays a list of characters', async() => {
     render(
       <MemoryRouter>
@@ -35,5 +26,11 @@ describe('Main component', () => {
     return waitFor(() => {
       expect(listOfCharacters).not.toBeEmptyDOMElement();
     });
+  });
+  it('creates a snapshot test of the character containor', () => {
+    const { asFragment } = render(<MemoryRouter>
+      <AllCharacters />
+    </MemoryRouter>);
+    expect(asFragment()).toMatchSnapshot();
   });
 });
