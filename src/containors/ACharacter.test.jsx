@@ -26,4 +26,11 @@ describe('Containor for just one character display', () => {
       screen.getByText('Alive');
     });
   });
+  it('creates a snapshot test of the character containor', async() => {
+    const { asFragment } = render(<MemoryRouter>
+      <ACharacter 
+        match={{ params: { id: '2' } }}/>
+    </MemoryRouter>);
+    expect(asFragment()).toMatchSnapshot();
+  });
 });

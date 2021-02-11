@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Containor for just one character display creates a snapshot test of the character containor 1`] = `
+<DocumentFragment>
+  <h1
+    data-testid="loading"
+  >
+    Loading A Character
+  </h1>
+</DocumentFragment>
+`;
